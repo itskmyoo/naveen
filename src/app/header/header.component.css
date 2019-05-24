@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: stretch;
+}
+.full-height {
+  height: 100% !important;
+}
+
+.col {
+  padding: 4px;
+}
+.col div {
+  padding: 4px;
+
+}
+
+div p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 4px 0px 0px 4px;
+}
