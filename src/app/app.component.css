@@ -3,7 +3,12 @@
 }
 
 .panel-default {
-  margin: 2px;
+  height: 320px;
+  overflow-y: auto;
+}
+
+.panel {
+  margin-bottom: 0px;
 }
 
 
@@ -13,4 +18,8 @@
 
 .blue {
   color:blue;
+}
+
+.col-md-8,.col-md-6,.col-md-12,.col-md-4,.col-md-3 {
+  padding: 1px;
 }

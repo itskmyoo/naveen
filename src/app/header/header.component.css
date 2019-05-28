@@ -7,8 +7,6 @@
 }
 
 .well {
-  width: 100%;
+  border-radius: 0px;
   margin-bottom: 0px;
-  margin-left: 1px;
-  margin-right: 1px;
 }
