@@ -8,5 +8,6 @@
 
 .well {
   border-radius: 0px;
-  margin-bottom: 0px;
+  margin: 1px 1px 1px 1px;
+
 }
