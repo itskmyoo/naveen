@@ -12,15 +12,20 @@
     <div class="col-md-12" style="flex:1">
 
     <div class="panel panel-default"  >
-      <div class="panel-heading" data-toggle="collapse" data-target="#calendar">Basic Customer Information</div>
-      <div class="panel-body collapse" id="basic-info"></div>
+      <div class="panel-heading" data-toggle="collapse" data-target="#demo">Basic Customer Information</div>
+      <div class="panel-body">
+        <div *ngFor="let user of homeService.userData; let i = index">
+          <input type="radio" name="gender" value="male" (click)="_handleUserClick(i)"> {{user.title}}<br>
+
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-md-12" style="flex:1">
 
   <div class="panel panel-default" >
     <div class="panel-heading" data-toggle="collapse" data-target="#basic-info">Calendar</div>
-    <div class="panel-body collapse" id="calendar"></div>
+    <div class="panel-body"></div>
   </div>
 </div>
 </div>
@@ -31,16 +36,24 @@
 
     <div class="panel panel-default" >
       <div class="panel-heading">Balance and Past Due</div>
-      <div class="panel-body collapse" id="balance-due"></div>
+      <div class="panel-body" id="balance-due">
+        <p style="padding:4px;">User Cards</p>
+        <div style="display:flex;flex-direction:row">
+          <app-credit-card *ngFor="let card of currentUser.cards; let i = index" [card]="card" (click)="_handleCardClick(card)"></app-credit-card>
+
+        </div>
+        <hr>
+          <app-balance-detail [card]="currentCard"></app-balance-detail>
+      </div>
     </div>
 </div>
 
 
-  <div class="col-md-12" style="flex:1">
+  <div class="col-md-12" >
 
     <div class="panel panel-default" >
       <div class="panel-heading">Customer Preference</div>
-      <div class="panel-body">
+      <div class="panel-body collapse">
         <textarea name="name" style="width:100%"></textarea>
         <br>
         <input type="text" name="" value="" style="width:100%">
@@ -73,7 +86,10 @@
           </tbody>
         </table>
         </div>
+        <div class="table-responsive">
 
+
+        </div>
         <div class="table-responsive">
 
         <table class="table table-bordered">
